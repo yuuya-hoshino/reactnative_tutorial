@@ -1,0 +1,17 @@
+# React Native 開発用 Docker Compose 設定
+
+version: '3'
+services:
+  app:
+    # 現在のディレクトリの Dockerfile を使用してイメージをビルド
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # ホストポートをコンテナポートにマッピングして Expo 開発を可能にする
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+    # ライブコード編集を有効にするために現在のディレクトリをコンテナにマウント
+    volumes:
+      - .:/app
