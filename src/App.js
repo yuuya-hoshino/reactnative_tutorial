@@ -18,14 +18,20 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Islamと一緒にご飯を食べる細江</Text>
+      <Text style={styles.text}>アカウント登録</Text>
       <TextInput
         style={styles.input}
         value={inputValue}
         onChangeText={handleInputChange}
         placeholder="ここに入力してください"
       />
-      <Button title="送信" onPress={handleButtonPress} />
+      <TextInput
+        style={styles.input}
+        value={inputValue}
+        onChangeText={handleInputChange}
+        placeholder="ここに入力してください"
+      />
+      <Button title="ログインはこちら" onPress={handleButtonPress} />
       <StatusBar style="auto" />
     </View>
   );
@@ -34,18 +40,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FF00FF',
+    backgroundColor: '#afeeee',
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    fontSize: 20,
+    fontSize: 150,
     marginBottom: 20,
   },
   input: {
-    width: '80%',
+    width: '50%',
     borderWidth: 1,
-    borderColor: '#000',
     padding: 10,
     marginBottom: 20,
   },
